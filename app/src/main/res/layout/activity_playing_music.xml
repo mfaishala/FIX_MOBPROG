@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage"
+    android:background="#151515"
+    >
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navbar_playing_music"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/navbar_1_2"
+        app:menu="@menu/menu_bottom_2"
+        app:itemIconTint="#FF1F00"
+        app:itemIconSize="35dp"
+        app:itemTextColor="#FF1F00"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1000dp"
+            >
+
+            <ImageButton
+                android:id="@+id/button_back_ply_music"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/ic_back"
+                android:clickable="true"
+                android:onClick="profile"
+                tools:ignore="OnClick" />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="225dp"
+        android:layout_height="225dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="115dp"
+        app:cardCornerRadius="120dp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/playing_music_02"
+            android:scaleType="centerCrop"
+            />
+    </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/judul_lagu_playing"
+                android:layout_width="300dp"
+                android:layout_height="36dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="358dp"
+                android:singleLine="true"
+                android:text="On and On (feat. Daniel Levi) [NCS Release]"
+                android:textAlignment="center"
+                android:textColor="#FFFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/artist_lagu_pliying"
+                android:layout_width="300dp"
+                android:layout_height="36dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="393dp"
+                android:text="Cartoon"
+                android:textAlignment="center"
+                android:textColor="#B1B1B1"
+                android:textSize="17dp" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="595dp"
+                android:background="@drawable/shape_lyrics" />
+
+            <ImageView
+                android:layout_width="39dp"
+                android:layout_height="5dp"
+                android:background="@drawable/shape_lyrics_2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="610dp"
+                />
+
+            <TextView
+                android:layout_width="39dp"
+                android:layout_height="19dp"
+                android:textColor="#FFFF"
+                android:text="Lyrics"
+                android:textSize="14dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="620dp"
+                android:textAlignment="center"
+                />
+
+            <TextView
+                android:id="@+id/lirik_lagu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="660dp"
+                android:layout_marginRight="10dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="#FFFF" />
+
+            <SeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="280dp"
+                android:layout_height="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="440dp"
+                android:max="@integer/material_motion_duration_long_1"
+                android:progress="0"
+                android:thumb="@drawable/ic_thumb" />
+
+            <TextView
+                android:id="@+id/player_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="465dp"
+                android:text="00:00"
+                android:textColor="#393E46"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/player_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="465dp"
+                android:layout_marginRight="45dp"
+                android:text="00:00"
+                android:textColor="#393E46"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btplay"
+                android:layout_width="69dp"
+                android:layout_height="69dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="500dp"
+                android:background="@drawable/ic_resume_button" />
+
+            <ImageButton
+                android:id="@+id/btpause"
+                android:layout_width="69dp"
+                android:layout_height="69dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="500dp"
+                android:background="@drawable/ic_pause_button"
+                android:visibility="gone"
+                />
+
+            <ImageButton
+                android:id="@+id/btrewind"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="68dp"
+                android:layout_marginTop="512dp"
+                android:background="@drawable/ic_rewind_button"
+                />
+
+            <ImageButton
+                android:id="@+id/btnext"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="512dp"
+                android:layout_marginRight="68dp"
+                android:background="@drawable/ic_next_button" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
